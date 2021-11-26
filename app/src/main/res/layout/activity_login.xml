@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/front"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".LoginActivity" >
+
+  <EditText
+      android:id="@+id/Email"
+      android:layout_width="221dp"
+      android:layout_height="60dp"
+      android:ems="10"
+      android:hint="email"
+      android:inputType="textEmailAddress"
+      android:visibility="visible"
+      tools:layout_editor_absoluteX="86dp"
+      tools:layout_editor_absoluteY="264dp"
+      tools:visibility="visible" />
+
+  <EditText
+      android:id="@+id/pass"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:hint="password"
+      android:inputType="textPassword"
+      tools:layout_editor_absoluteX="91dp"
+      tools:layout_editor_absoluteY="381dp" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Login"
+      tools:layout_editor_absoluteX="133dp"
+      tools:layout_editor_absoluteY="238dp" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Don't Have Account? Register Now!"
+      tools:layout_editor_absoluteX="96dp"
+      tools:layout_editor_absoluteY="563dp" />
+</android.support.constraint.ConstraintLayout>
