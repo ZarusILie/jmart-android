@@ -1,48 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/front"
+    android:id="@+id/Login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
-    tools:context=".LoginActivity" >
+    tools:context=".LoginActivity">
 
-  <EditText
-      android:id="@+id/Email"
-      android:layout_width="221dp"
-      android:layout_height="60dp"
-      android:ems="10"
-      android:hint="email"
-      android:inputType="textEmailAddress"
-      android:visibility="visible"
-      tools:layout_editor_absoluteX="86dp"
-      tools:layout_editor_absoluteY="264dp"
-      tools:visibility="visible" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="94dp">
 
-  <EditText
-      android:id="@+id/pass"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:ems="10"
-      android:hint="password"
-      android:inputType="textPassword"
-      tools:layout_editor_absoluteX="91dp"
-      tools:layout_editor_absoluteY="381dp" />
+        <EditText
+            android:id="@+id/log_Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtPass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-  <Button
-      android:id="@+id/button"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Login"
-      tools:layout_editor_absoluteX="133dp"
-      tools:layout_editor_absoluteY="238dp" />
+        <EditText
+            android:id="@+id/log_Pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="160dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent" />
 
-  <TextView
-      android:id="@+id/textView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Don't Have Account? Register Now!"
-      tools:layout_editor_absoluteX="96dp"
-      tools:layout_editor_absoluteY="563dp" />
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="Login"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/txtDontHaveAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/regisNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dont't Have Account? Register Now!"
+            android:textColor="#132BB1"
+            app:layout_constraintBottom_toTopOf="@+id/txtRegisterNow"
+            tools:layout_editor_absoluteX="139dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
