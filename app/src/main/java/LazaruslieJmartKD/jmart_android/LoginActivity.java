@@ -3,7 +3,6 @@ package LazaruslieJmartKD.jmart_android;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
-import android.util.JsonReader;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,22 +12,30 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import LazaruslieJmartKD.jmart_android.model.Account;
+import LazaruslieJmartKD.jmart_android.model.Store;
 import LazaruslieJmartKD.jmart_android.request.LoginRequest;
 
 public class LoginActivity extends AppCompatActivity {
 
     private static final Gson gson = new Gson();
     private static Account loggedAccount = null;
-    private TextView regisNow_tv;
-    private EditText Email_tv;
-    private EditText Pass_tv;
-    private Button loginBtn_tv;
+    private TextView regisNow_TV;
+    private EditText Email_TV;
+    private EditText Pass_TV;
+    private Button loginBtn_TV;
 
     public static Account getLoggedAccount() {
         return loggedAccount;
+    }
+
+    public static void reloadLoggedAccount(String response) {
+        loggedAccount = gson.fromJson(response, Account.class);
+    }
+
+    public static void insertLoggedAccountStore(String response) {
+        Store newStore = gson.fromJson(response, Store.class);
+        loggedAccount.store = newStore;
     }
 
     @Override
@@ -36,18 +43,18 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Email_tv = findViewById(R.id.log_Email);
-        Pass_tv = findViewById(R.id.log_Pass);
-        loginBtn_tv = findViewById(R.id.loginBtn);
-        regisNow_tv = findViewById(R.id.regisNow);
+        Email_TV = findViewById(R.id.log_Email);
+        Pass_TV = findViewById(R.id.log_Pass);
+        loginBtn_TV = findViewById(R.id.loginBtn);
+        regisNow_TV = findViewById(R.id.regisNow);
 
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        loginBtn_tv.setOnClickListener(new View.OnClickListener() {
+        loginBtn_TV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = Email_tv.getText().toString();
-                String password = Pass_tv.getText().toString();
+                String email = Email_TV.getText().toString();
+                String password = Pass_TV.getText().toString();
                 LoginRequest loginRequest = new LoginRequest(email, password, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -70,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(loginRequest);
             }
         });
-        regisNow_tv.setOnClickListener(new View.OnClickListener(){
+        regisNow_TV.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 openRegisterActivity();

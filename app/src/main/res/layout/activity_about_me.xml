@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutMeActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="580dp"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".AboutMeActivity">
+
+            <TextView
+                android:id="@+id/accountDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Account Details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="20dp"
+                android:text="Name"
+                app:layout_constraintStart_toStartOf="@+id/accountDetail"
+                app:layout_constraintTop_toBottomOf="@+id/accountDetail" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                app:layout_constraintEnd_toEndOf="@+id/name"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Balance"
+                app:layout_constraintEnd_toEndOf="@+id/email"
+                app:layout_constraintStart_toStartOf="@+id/email"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="TextView"
+                android:textColor="#050000"
+                app:layout_constraintBottom_toBottomOf="@+id/name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/emailUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="TextView"
+                android:textColor="#050000"
+                app:layout_constraintBottom_toBottomOf="@+id/email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/email" />
+
+            <TextView
+                android:id="@+id/balanceUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="TextView"
+                android:textColor="#4FADFE"
+                app:layout_constraintBottom_toBottomOf="@+id/balance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/balance" />
+
+            <EditText
+                android:id="@+id/topUp_ET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="7"
+                android:hint="Top Up Amount"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/accountDetail"
+                app:layout_constraintStart_toStartOf="@+id/accountDetail"
+                app:layout_constraintTop_toBottomOf="@+id/balance"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/topUpBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#DADADA"
+                android:text="TOP UP"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/topUp_ET"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/topUp_ET" />
+
+            <Button
+                android:id="@+id/regisStoreBtn"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#DADADA"
+                android:text="REGISTER STORE"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topUp_ET" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/regisStore_CV"
+                android:layout_width="324dp"
+                android:layout_height="350dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/regisStore_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Register Store"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/storeName_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-10dp"
+                        android:layout_marginTop="30dp"
+                        android:ems="18"
+                        android:hint="Name"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/regisStore_TV"
+                        app:layout_constraintTop_toBottomOf="@+id/regisStore_TV" />
+
+                    <EditText
+                        android:id="@+id/storeAddress_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:ems="18"
+                        android:hint="Address"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/storeName_ET"
+                        app:layout_constraintStart_toStartOf="@+id/storeName_ET"
+                        app:layout_constraintTop_toBottomOf="@+id/storeName_ET" />
+
+                    <EditText
+                        android:id="@+id/storePhoneNumber_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:ems="18"
+                        android:hint="Phone Number"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/storeAddress_ET"
+                        app:layout_constraintStart_toStartOf="@+id/storeAddress_ET"
+                        app:layout_constraintTop_toBottomOf="@+id/storeAddress_ET" />
+
+                    <Button
+                        android:id="@+id/regisStoreConfBtn"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="30dp"
+                        android:backgroundTint="#FF5722"
+                        android:text="REGISTER"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/storePhoneNumber_ET"
+                        app:layout_constraintTop_toBottomOf="@+id/storePhoneNumber_ET" />
+
+                    <Button
+                        android:id="@+id/regisStoreCancelBtn"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
+                        android:backgroundTint="#FF5722"
+                        android:text="CANCEL"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/regisStoreConfBtn"
+                        app:layout_constraintEnd_toEndOf="@+id/storePhoneNumber_ET"
+                        app:layout_constraintTop_toTopOf="@+id/regisStoreConfBtn" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/storeExists_CV"
+                android:layout_width="324dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="40dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Store"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/storeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Name"
+                        app:layout_constraintEnd_toEndOf="@+id/store"
+                        app:layout_constraintTop_toBottomOf="@+id/store" />
+
+                    <TextView
+                        android:id="@+id/storeAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:text="Address"
+                        app:layout_constraintStart_toStartOf="@+id/storeName"
+                        app:layout_constraintTop_toBottomOf="@+id/storeName" />
+
+                    <TextView
+                        android:id="@+id/storePhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:text="Phone Number"
+                        app:layout_constraintStart_toStartOf="@+id/storeAddress"
+                        app:layout_constraintTop_toBottomOf="@+id/storeAddress" />
+
+                    <TextView
+                        android:id="@+id/storeName_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="TextView"
+                        android:textColor="#050000"
+                        app:layout_constraintBottom_toBottomOf="@+id/storeName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/storeName" />
+
+                    <TextView
+                        android:id="@+id/storeAddress_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="TextView"
+                        android:textColor="#050000"
+                        app:layout_constraintBottom_toBottomOf="@+id/storeAddress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/storeAddress" />
+
+                    <TextView
+                        android:id="@+id/storePhoneNumber_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="TextView"
+                        android:textColor="#050000"
+                        app:layout_constraintBottom_toBottomOf="@+id/storePhoneNumber"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/storePhoneNumber" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,9 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27685185185185185" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.27685185185185185" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.27685185185185185" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.27685185185185185" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.27685185185185185" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.27685185185185185" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/layout/activity_about_me.xml" value="0.13306451612903225" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/layout/activity_create_product.xml" value="0.4" />
         <entry key="..\:/OOP-android/jmart-android/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/layout/activity_my_recycler_view_adapter.xml" value="0.22509057971014493" />
         <entry key="..\:/OOP-android/jmart-android/app/src/main/res/layout/activity_register.xml" value="0.22780797101449277" />
+        <entry key="..\:/OOP-android/jmart-android/app/src/main/res/menu/menu_main.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>
