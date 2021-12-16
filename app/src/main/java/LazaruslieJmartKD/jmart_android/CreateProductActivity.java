@@ -17,6 +17,12 @@ import com.android.volley.toolbox.Volley;
 
 import LazaruslieJmartKD.jmart_android.request.CreateProductRequest;
 
+/**
+ * class CreateProductActivity
+ *
+ * @author (Lazaruslie Karsono)
+ */
+
 public class CreateProductActivity extends AppCompatActivity {
 
     private EditText CreateProductName_ET;

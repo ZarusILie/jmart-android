@@ -23,6 +23,12 @@ import java.util.Map;
 
 import LazaruslieJmartKD.jmart_android.request.RegisterStoreRequest;
 
+/**
+ * class AboutmeActivity
+ *
+ * @author (Lazaruslie Karsono)
+ */
+
 public class AboutMeActivity extends AppCompatActivity {
 
     private TextView UserName;
@@ -38,6 +44,7 @@ public class AboutMeActivity extends AppCompatActivity {
     private EditText StorePhoneNumber_ET;
     private Button RegisStoreCancelBtn;
     private Button RegisStoreConfBtn;
+    private Button Invoice_History;
     private TextView StoreName_TV;
     private TextView StoreAddress_TV;
     private TextView StorePhoneNumber_TV;
@@ -57,7 +64,14 @@ public class AboutMeActivity extends AppCompatActivity {
         UserName.setText(LoginActivity.getLoggedAccount().name);
         UserEmail.setText(LoginActivity.getLoggedAccount().email);
         BalanceUser.setText(String.valueOf(LoginActivity.getLoggedAccount().balance));
-
+        Invoice_History = findViewById(R.id.InvoiceHistory);
+        Invoice_History.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), InvoiceHistoryActivity.class);
+                startActivity(intent);
+            }
+        });
         //Top Up button
         TopUpBtn = findViewById(R.id.topUpBtn);
         TopUpBtn.setOnClickListener(new View.OnClickListener() {

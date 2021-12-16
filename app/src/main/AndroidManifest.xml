@@ -13,7 +13,13 @@
         android:theme="@style/Theme.Jmartandroid"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".MyRecyclerViewAdapter"
+            android:name=".InvoiceHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetailActivity"
             android:exported="false" />
         <activity
             android:name=".CreateProductActivity"

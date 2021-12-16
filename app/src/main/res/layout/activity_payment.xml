@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity">
+
+    <Button
+        android:id="@+id/SubmitPaymentBtn"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="24dp"
+        android:text="Pay"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/CancelBtn"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="Cancel"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/SubmitPaymentBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SubmitPaymentBtn" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_reviewYourOrder"
+        android:layout_width="380dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/AmountPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Amount :"
+                app:layout_constraintStart_toStartOf="@+id/DiscountPay"
+                app:layout_constraintTop_toBottomOf="@+id/DiscountPay" />
+
+            <TextView
+                android:id="@+id/ReviewOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Review Your Order"
+                android:textColor="#656060"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/SellerIdPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="212dp"
+                android:text="Seller ID :"
+                android:textColor="#656060"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReviewOrder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReviewOrder"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/SellerIdPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="SellerIdDetail"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/SellerIdPay"
+                app:layout_constraintStart_toEndOf="@+id/SellerIdPay"
+                app:layout_constraintTop_toTopOf="@+id/SellerIdPay" />
+
+            <TextView
+                android:id="@+id/ProdNamePay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:maxEms="8"
+                android:text="ProductName"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/ReviewOrder"
+                app:layout_constraintTop_toBottomOf="@+id/ReviewOrder" />
+
+            <TextView
+                android:id="@+id/CategoryPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Category :"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/ProdNamePay"
+                app:layout_constraintTop_toBottomOf="@+id/ProdNamePay" />
+
+            <TextView
+                android:id="@+id/CategoryPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="TextView"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/CategoryPay"
+                app:layout_constraintStart_toEndOf="@+id/CategoryPay"
+                app:layout_constraintTop_toTopOf="@+id/CategoryPay" />
+
+            <TextView
+                android:id="@+id/PricePay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Price :"
+                app:layout_constraintStart_toStartOf="@+id/CategoryPay"
+                app:layout_constraintTop_toBottomOf="@+id/CategoryPay" />
+
+            <TextView
+                android:id="@+id/DiscountPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Discount :"
+                app:layout_constraintStart_toStartOf="@+id/PricePay"
+                app:layout_constraintTop_toBottomOf="@+id/PricePay" />
+
+            <TextView
+                android:id="@+id/PriceDetailPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="PriceDetail"
+                android:textColor="#00FFF7"
+                app:layout_constraintBottom_toBottomOf="@+id/PricePay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/PricePay" />
+
+            <TextView
+                android:id="@+id/DiscountDetailPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="DiscountDetail"
+                android:textColor="#00FFF7"
+                app:layout_constraintBottom_toBottomOf="@+id/DiscountPay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/DiscountPay" />
+
+            <EditText
+                android:id="@+id/AmountPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:ems="4"
+                android:inputType="number"
+                android:text="1"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#00FFF7"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/AmountPay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/AmountPay" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/TotalPricePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Total :"
+        android:textColor="#656060"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/cv_reviewYourOrder"
+        app:layout_constraintTop_toBottomOf="@+id/cv_reviewYourOrder" />
+
+    <TextView
+        android:id="@+id/AddressPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Enter Address :"
+        android:textColor="#656060"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/ShipmentPay"
+        app:layout_constraintTop_toBottomOf="@+id/ShipmentPay" />
+
+    <TextView
+        android:id="@+id/TotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TotalPrice"
+        android:textColor="#00FFF7"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/TotalPricePay"
+        app:layout_constraintEnd_toEndOf="@+id/cv_reviewYourOrder"
+        app:layout_constraintTop_toTopOf="@+id/TotalPricePay" />
+
+    <TextView
+        android:id="@+id/ShipmentPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ShipmentDetail"
+        android:textColor="#00FFF7"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ShipmentPay"
+        app:layout_constraintEnd_toEndOf="@+id/BalancePayment"
+        app:layout_constraintTop_toTopOf="@+id/ShipmentPay" />
+
+    <TextView
+        android:id="@+id/BalancePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Balance :"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/TotalPricePay"
+        app:layout_constraintTop_toBottomOf="@+id/TotalPricePay" />
+
+    <TextView
+        android:id="@+id/BalancePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BalanceDetail"
+        android:textColor="#00FFF7"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/BalancePay"
+        app:layout_constraintEnd_toEndOf="@+id/TotalPrice"
+        app:layout_constraintTop_toTopOf="@+id/BalancePay" />
+
+    <TextView
+        android:id="@+id/YourBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Your Balance"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/BalancePay"
+        app:layout_constraintTop_toBottomOf="@+id/BalancePay" />
+
+    <TextView
+        android:id="@+id/ShipmentPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Shipment :"
+        app:layout_constraintStart_toStartOf="@+id/YourBalance"
+        app:layout_constraintTop_toBottomOf="@+id/YourBalance" />
+
+    <EditText
+        android:id="@+id/ShipmentAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="17"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/AddressPay"
+        app:layout_constraintTop_toBottomOf="@+id/AddressPay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

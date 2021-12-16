@@ -16,6 +16,12 @@ import LazaruslieJmartKD.jmart_android.model.Account;
 import LazaruslieJmartKD.jmart_android.model.Store;
 import LazaruslieJmartKD.jmart_android.request.LoginRequest;
 
+/**
+ * class LoginActivity
+ *
+ * @author (Lazaruslie Karsono)
+ */
+
 public class LoginActivity extends AppCompatActivity {
 
     private static final Gson gson = new Gson();

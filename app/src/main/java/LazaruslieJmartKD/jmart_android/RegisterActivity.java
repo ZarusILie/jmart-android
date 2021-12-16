@@ -20,6 +20,13 @@ import org.json.JSONObject;
 
 import LazaruslieJmartKD.jmart_android.request.RegisterRequest;
 
+/**
+ * class RegisterActivity
+ *
+ * @author (Lazaruslie Karsono)
+ */
+
+
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText name_regis;

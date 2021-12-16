@@ -1,5 +1,11 @@
 package LazaruslieJmartKD.jmart_android.model;
 
+/**
+ * class Account
+ *
+ * @author (Lazaruslie Karsono)
+ */
+
 public class Account extends Serializable {
     public double balance;
     public String email;

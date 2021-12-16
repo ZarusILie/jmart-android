@@ -1,5 +1,11 @@
 package LazaruslieJmartKD.jmart_android.model;
 
+/**
+ * class Product
+ *
+ * @author (Lazaruslie Karsono)
+ */
+
 public class Product extends Serializable {
     public int accountId;
     public ProductCategory category;

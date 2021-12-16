@@ -35,7 +35,14 @@ import java.util.List;
 
 import LazaruslieJmartKD.jmart_android.model.Product;
 
+/**
+ * class MainActivity
+ *
+ * @author (Lazaruslie Karsono)
+ */
+
 public class MainActivity extends AppCompatActivity implements MyRecyclerViewAdapter.ItemClickListener {
+    public static final String Extra_ProductID = "LazaruslieJmartKD.jmart_android.Extra_ProductID";
     private static final Gson gson = new Gson();
     MyRecyclerViewAdapter adapter;
     private TabLayout TabLayoutMain;
@@ -170,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
                         //After filtering, move back to display the product tab (set product visible, set Filter invisible)
                         Product_CV.setVisibility(View.VISIBLE);
                         Filter_CV.setVisibility(View.INVISIBLE);
-                        Toast.makeText(getApplicationContext(), "Filtering Succesful", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Filtering Successful", Toast.LENGTH_LONG).show();
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -227,7 +234,10 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
     //RecycleView Item ClickListener
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(getApplicationContext(), "Testing click product", Toast.LENGTH_LONG).show();
+        int clickedItemId = adapter.getClickedItemId(position);
+        Intent intent = new Intent(getApplicationContext(), ProductDetailActivity.class);
+        intent.putExtra(Extra_ProductID, clickedItemId);
+        startActivity(intent);
     }
 
     //menu

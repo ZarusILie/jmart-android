@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailActivity">
+
+    <TextView
+        android:id="@+id/SellerIdDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SellerIdDetail"
+        app:layout_constraintStart_toStartOf="@+id/SellerId"
+        app:layout_constraintTop_toBottomOf="@+id/SellerId" />
+
+    <TextView
+        android:id="@+id/SellerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="SellerID"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/Shipment"
+        app:layout_constraintTop_toTopOf="@+id/Shipment" />
+
+    <TextView
+        android:id="@+id/Category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Category"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/Discount"
+        app:layout_constraintTop_toTopOf="@+id/Discount" />
+
+    <TextView
+        android:id="@+id/Condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Condition"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/Category"
+        app:layout_constraintTop_toTopOf="@+id/Category" />
+
+    <TextView
+        android:id="@+id/Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Weight"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/Condition"
+        app:layout_constraintTop_toTopOf="@+id/Condition" />
+
+    <TextView
+        android:id="@+id/Shipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Shipment"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/Weight"
+        app:layout_constraintTop_toTopOf="@+id/Weight" />
+
+    <Button
+        android:id="@+id/BackBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PurchaseBtn"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellerIdDetail" />
+
+    <Button
+        android:id="@+id/PurchaseBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Purchase"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellerIdDetail" />
+
+    <TextView
+        android:id="@+id/ProductDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/BackBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="84dp"
+        android:text="Price"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/ProductDetail"
+        app:layout_constraintTop_toBottomOf="@+id/ProductDetail" />
+
+    <TextView
+        android:id="@+id/Discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Discount"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/Price"
+        app:layout_constraintTop_toTopOf="@+id/Price" />
+
+    <TextView
+        android:id="@+id/PriceDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PriceDetail"
+        app:layout_constraintStart_toStartOf="@+id/Price"
+        app:layout_constraintTop_toBottomOf="@+id/Price" />
+
+    <TextView
+        android:id="@+id/DiscountDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DiscountDetail"
+        app:layout_constraintStart_toStartOf="@+id/Discount"
+        app:layout_constraintTop_toBottomOf="@+id/Discount" />
+
+    <TextView
+        android:id="@+id/CategoryDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CategoryDetail"
+        app:layout_constraintStart_toStartOf="@+id/Category"
+        app:layout_constraintTop_toBottomOf="@+id/Category" />
+
+    <TextView
+        android:id="@+id/ConditionDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ConditionDetail"
+        app:layout_constraintStart_toStartOf="@+id/Condition"
+        app:layout_constraintTop_toBottomOf="@+id/Condition" />
+
+    <TextView
+        android:id="@+id/WeightDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WeightDetail"
+        app:layout_constraintStart_toStartOf="@+id/Weight"
+        app:layout_constraintTop_toBottomOf="@+id/Weight" />
+
+    <TextView
+        android:id="@+id/ShipmentDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ShipmentDetail"
+        app:layout_constraintStart_toStartOf="@+id/Shipment"
+        app:layout_constraintTop_toBottomOf="@+id/Shipment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
